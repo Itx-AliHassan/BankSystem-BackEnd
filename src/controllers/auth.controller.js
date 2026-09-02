@@ -1,4 +1,6 @@
 const userModel = require('../models/user.model')
+const jwt = require('jsonwebtoken')
+
 
 /**
  * - Register User
@@ -15,6 +17,8 @@ const registerUser = async (req, res) => {
     })
 
     const user = await userModel.create({ name, email, password })
+
+    const token = jwt.sign({ userID: user._id }, process.env.JWT_SECRETS, { expiresIn: '7d' })
 }
 
 
