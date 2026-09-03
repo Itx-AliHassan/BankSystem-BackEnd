@@ -22,7 +22,7 @@ const registerUser = async (req, res) => {
 
     await sendEmail({
         to: user.email,
-        templateType: 'welcome',
+        templateType: 'welcome-email',
         variables: {
             name: user.name,
             subject: 'Welcome to Our Website'
@@ -60,7 +60,7 @@ const loginUser = async (req, res) => {
 
     await sendEmail({
         to: user.email,
-        templateType: 'login',
+        templateType: 'security-alert',
         variables: {
             name: user.name,
             subject: 'Someone just login to your Account',
