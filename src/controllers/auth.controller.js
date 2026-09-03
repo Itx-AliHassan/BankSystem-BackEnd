@@ -1,7 +1,7 @@
 const userModel = require('../models/user.model')
 const jwt = require('jsonwebtoken')
-const sendEmail = require('../utils/sendEmail')
-const getLoginInfo = require('../utils/getInfo')
+const sendEmail = require('../services/sendEmail.service')
+const getLoginInfo = require('../services/getInfo.service')
 
 
 /**
