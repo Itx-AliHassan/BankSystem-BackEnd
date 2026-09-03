@@ -6,7 +6,7 @@ async function connectToDb() {
             console.log('Server connected to DB 🥳');
         })
         .catch(error => {
-            console.log('Got an error While connecting to DB 😅:', error)
+            console.log('Got an error While connecting to DB 😵‍💫:', error)
             process.exit(1)
         })
 }
